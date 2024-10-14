@@ -1,23 +1,20 @@
 {
-  "name": "test",
+  "name": "getstartpack",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently --names \"TAILWIND,SERVE\" -c \"bgBlue.bold,bgGreen.bold\" \"npx tailwindcss -i ./assets/css/tailwindcss.css -o ./assets/css/styles.css --watch\" \"lite-server --watch=*.html,*.css,*.js\"",
-    "serve": "lite-server --watch=*.html,*.css,*.js",
-    "tailwind": "npx tailwindcss -i ./assets/css/tailwindcss.css -o ./styles.css --watch"
+    "dev": "vite",
+    "build": "vite build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
-  "devDependencies": {
+  "dependencies": {
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.13"
-  },
-  "dependencies": {
-    "concurrently": "^9.0.1",
-    "lite-server": "^2.6.1"
+    "preline": "^2.5.0",
+    "tailwindcss": "^3.4.13",
+    "vite": "^5.4.9"
   }
 }

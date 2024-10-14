@@ -3,20 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="stylesheet" href="assets/css/custom.css" />
+    <title>Home</title>
   </head>
-  <body>
-    <h2 class="text-2xl font-bold text-center text-green-600">Hello</h2>
+  <body class="bg-gray-100">
     <header
-      class="z-50 flex flex-wrap w-full py-3 text-sm bg-white sm:justify-start sm:flex-nowrap sm:py-0 dark:bg-neutral-800"
+      class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 sm:py-0 dark:bg-neutral-800"
     >
       <nav class="max-w-[85rem] w-full mx-auto px-4 md:px-6 lg:px-8">
         <div class="relative sm:flex sm:items-center">
           <div class="flex items-center justify-between">
             <a
-              class="flex-none text-xl font-semibold text-black focus:outline-none focus:opacity-80 dark:text-white"
+              class="flex-none font-semibold text-xl text-black focus:outline-none focus:opacity-80 dark:text-white"
               href="#"
               aria-label="Brand"
               >Brand</a
@@ -24,12 +21,12 @@
             <div class="sm:hidden">
               <button
                 type="button"
-                class="inline-flex items-center justify-center p-2 text-gray-800 bg-white border border-gray-200 rounded-lg shadow-sm hs-collapse-toggle gap-x-2 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent dark:border-neutral-700 dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
-                id="hs-navbar-basic-usage-collapse"
+                class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent dark:border-neutral-700 dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+                id="hs-navbar-columns-collapse"
                 aria-expanded="false"
-                aria-controls="hs-navbar-basic-usage"
+                aria-controls="hs-navbar-columns"
                 aria-label="Toggle navigation"
-                data-hs-collapse="#hs-navbar-basic-usage"
+                data-hs-collapse="#hs-navbar-columns"
               >
                 <svg
                   class="hs-collapse-open:hidden shrink-0 size-4"
@@ -48,7 +45,7 @@
                   <line x1="3" x2="21" y1="18" y2="18" />
                 </svg>
                 <svg
-                  class="hidden hs-collapse-open:block shrink-0 size-4"
+                  class="hs-collapse-open:block hidden shrink-0 size-4"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -67,34 +64,27 @@
           </div>
 
           <div
-            id="hs-navbar-basic-usage"
-            class="hidden overflow-hidden transition-all duration-300 hs-collapse basis-full grow sm:block"
-            aria-labelledby="hs-navbar-basic-usage-collapse"
+            id="hs-navbar-columns"
+            class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow sm:block"
+            aria-labelledby="hs-navbar-columns-collapse"
           >
             <div
-              class="flex flex-col mt-5 gap-y-3 sm:gap-y-0 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5"
+              class="flex flex-col gap-y-3 sm:gap-y-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5"
             >
-              <a
-                class="font-medium text-blue-500 sm:p-2 focus:outline-none"
-                href="#"
-                aria-current="page"
-                >Active</a
-              >
-
               <div
-                class="hs-dropdown [--strategy:static] sm:[--strategy:absolute] [--adaptive:none] sm:[--trigger:hover] [--auto-close:false] [--is-collapse:true] sm:[--is-collapse:false]"
+                class="hs-dropdown [--strategy:static] sm:[--strategy:absolute] [--adaptive:none] sm:[--trigger:hover] [--is-collapse:true] sm:[--is-collapse:false]"
               >
                 <button
-                  id="hs-mega-menu"
+                  id="hs-mega-menu-1-col"
                   type="button"
-                  class="flex items-center w-full font-medium text-gray-600 hs-dropdown-toggle sm:p-2 hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                  class="sm:p-2 flex items-center w-full text-gray-600 font-medium hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
                   aria-haspopup="menu"
                   aria-expanded="false"
                   aria-label="Mega Menu"
                 >
-                  Mega Menu
+                  1 Col
                   <svg
-                    class="duration-300 hs-dropdown-open:-rotate-180 sm:hs-dropdown-open:rotate-0 ms-2 shrink-0 size-4"
+                    class="hs-dropdown-open:-rotate-180 sm:hs-dropdown-open:rotate-0 duration-300 ms-1 shrink-0 size-4"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -110,10 +100,147 @@
                 </button>
 
                 <div
-                  class="hs-dropdown-menu transition-[height] sm:transition-[opacity,margin] duration-300 ease-in-out sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-full hidden z-10 sm:mt-3 top-full start-0 min-w-60 bg-white sm:shadow-md rounded-lg py-2 sm:px-2 dark:bg-neutral-800 sm:dark:border dark:border-neutral-700 dark:divide-neutral-700 before:absolute"
+                  class="hs-dropdown-menu transition-[height] sm:transition-[opacity,margin] duration-300 ease-in-out sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 top-full sm:w-48 bg-white sm:shadow-md rounded-lg py-2 sm:px-2 dark:bg-neutral-800 sm:dark:border dark:border-neutral-700 dark:divide-neutral-700"
                   role="menu"
                   aria-orientation="vertical"
-                  aria-labelledby="hs-mega-menu"
+                  aria-labelledby="hs-mega-menu-1-col"
+                >
+                  <div class="flex flex-col">
+                    <a
+                      class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                      href="#"
+                    >
+                      About
+                    </a>
+                    <a
+                      class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                      href="#"
+                    >
+                      Services
+                    </a>
+                    <a
+                      class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                      href="#"
+                    >
+                      Customer Story
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="hs-dropdown [--strategy:static] sm:[--strategy:absolute] [--adaptive:none] sm:[--trigger:hover] [--is-collapse:true] sm:[--is-collapse:false]"
+              >
+                <button
+                  id="hs-mega-menu-2-cols"
+                  type="button"
+                  class="sm:p-2 flex items-center w-full text-gray-600 font-medium hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                  aria-haspopup="menu"
+                  aria-expanded="false"
+                  aria-label="Mega Menu"
+                >
+                  2 Cols
+                  <svg
+                    class="hs-dropdown-open:-rotate-180 sm:hs-dropdown-open:rotate-0 duration-300 ms-1 shrink-0 size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+
+                <div
+                  class="hs-dropdown-menu transition-[height] sm:transition-[opacity,margin] duration-300 ease-in-out sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 top-full end-0 sm:w-96 bg-white sm:shadow-md rounded-lg py-2 sm:px-2 dark:bg-neutral-800 sm:dark:border dark:border-neutral-700 dark:divide-neutral-700"
+                  role="menu"
+                  aria-orientation="vertical"
+                  aria-labelledby="hs-mega-menu-2-cols"
+                >
+                  <div class="sm:grid sm:grid-cols-2">
+                    <div class="flex flex-col">
+                      <a
+                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                        href="#"
+                      >
+                        About
+                      </a>
+                      <a
+                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                        href="#"
+                      >
+                        Services
+                      </a>
+                      <a
+                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                        href="#"
+                      >
+                        Customer Story
+                      </a>
+                    </div>
+
+                    <div class="flex flex-col">
+                      <a
+                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                        href="#"
+                      >
+                        Careers
+                      </a>
+                      <a
+                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                        href="#"
+                      >
+                        Careers: Overview
+                      </a>
+                      <a
+                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                        href="#"
+                      >
+                        Careers: Apply
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="hs-dropdown [--strategy:static] sm:[--strategy:absolute] [--adaptive:none] sm:[--trigger:hover] [--is-collapse:true] sm:[--is-collapse:false]"
+              >
+                <button
+                  id="hs-mega-menu-3-cols"
+                  type="button"
+                  class="sm:p-2 flex items-center w-full text-gray-600 font-medium hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                  aria-haspopup="menu"
+                  aria-expanded="false"
+                  aria-label="Mega Menu"
+                >
+                  3 Cols
+                  <svg
+                    class="hs-dropdown-open:-rotate-180 sm:hs-dropdown-open:rotate-0 duration-300 ms-1 shrink-0 size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+
+                <div
+                  class="hs-dropdown-menu transition-[height] sm:transition-[opacity,margin] duration-300 ease-in-out sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 top-full end-0 sm:w-[30rem] bg-white sm:shadow-md rounded-lg py-2 sm:px-2 dark:bg-neutral-800 sm:dark:border dark:border-neutral-700 dark:divide-neutral-700"
+                  role="menu"
+                  aria-orientation="vertical"
+                  aria-labelledby="hs-mega-menu-3-cols"
                 >
                   <div class="sm:grid sm:grid-cols-3">
                     <div class="flex flex-col">
@@ -175,18 +302,12 @@
                   </div>
                 </div>
               </div>
-
-              <a
-                class="font-medium text-gray-600 sm:p-2 hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
-                href="#"
-                >Project</a
-              >
             </div>
           </div>
         </div>
       </nav>
     </header>
-    <script src="https://cdn.jsdelivr.net/npm/preline@2.5.0/dist/preline.min.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <!-- Scripts -->
+    <script type="module" src="assets/js/main.js"></script>
   </body>
 </html>
