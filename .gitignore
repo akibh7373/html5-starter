@@ -14,7 +14,6 @@ yarn-error.log*
 
 # Operating System files
 .DS_Store
-Thumbs.db
 
 # Environment variables
 .env
@@ -28,10 +27,16 @@ Thumbs.db
 *.DS_Store
 
 # Windows files
-Thumbs.db
 ehthumbs.db
 Desktop.ini
 
 # Custom build files
 *.log
 *.lock
+
+# IDE-specific files
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
