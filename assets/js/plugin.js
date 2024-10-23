@@ -7,5 +7,4 @@ AOS.init({
   easing: "ease-in-out", // Easing function
   once: true, // Whether animation should happen only once
 });
-import "preline";
 import "./custom";
