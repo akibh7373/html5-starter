@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
 
 // Function to get all HTML files in the root directory
 function getHtmlFiles() {

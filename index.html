@@ -11,22 +11,169 @@
     />
   </head>
   <body>
-    <div class="container p-4 mx-auto">
-      <h1 class="mb-8 text-3xl font-bold text-center">Unsplash Image Search</h1>
-      <form id="searchForm" class="flex justify-center mb-8">
-        <input
-          type="text"
-          id="query"
-          placeholder="Search for images..."
-          required
-          class="w-1/2 px-4 py-2 border border-gray-300 rounded-lg shadow-md pr-input"
-        />
-        <button type="submit" class="ml-4 pr-button">Search</button>
-      </form>
+    <div class="relative inline-flex hs-dropdown">
+      <button
+        id="hs-dropdown-with-title"
+        type="button"
+        class="inline-flex items-center px-4 py-3 text-sm font-medium text-gray-800 bg-white border border-gray-200 rounded-lg shadow-sm hs-dropdown-toggle gap-x-2 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+        aria-haspopup="menu"
+        aria-expanded="false"
+        aria-label="Dropdown"
+      >
+        Actions
+        <svg
+          class="hs-dropdown-open:rotate-180 size-4"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m6 9 6 6 6-6" />
+        </svg>
+      </button>
+
       <div
-        id="imageResults"
-        class="grid grid-cols-1 gap-6 md:grid-cols-3"
-      ></div>
+        class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg mt-2 divide-y divide-gray-200"
+        role="menu"
+        aria-orientation="vertical"
+        aria-labelledby="hs-dropdown-with-title"
+      >
+        <div class="p-1 space-y-0.5">
+          <span
+            class="block px-3 pt-2 pb-1 text-xs font-medium text-gray-400 uppercase"
+          >
+            Settings
+          </span>
+          <a
+            class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100"
+            href="#"
+          >
+            <svg
+              class="shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+              <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+            </svg>
+            Newsletter
+          </a>
+          <a
+            class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100"
+            href="#"
+          >
+            <svg
+              class="shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="8" cy="21" r="1" />
+              <circle cx="19" cy="21" r="1" />
+              <path
+                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+              />
+            </svg>
+            Purchases
+          </a>
+          <a
+            class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100"
+            href="#"
+          >
+            <svg
+              class="shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"
+              />
+              <path d="M12 12v9" />
+              <path d="m8 17 4 4 4-4" />
+            </svg>
+            Downloads
+          </a>
+          <a
+            class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100"
+            href="#"
+          >
+            <svg
+              class="shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+            Team Account
+          </a>
+        </div>
+        <div class="p-1 space-y-0.5">
+          <span
+            class="block px-3 pt-2 pb-1 text-xs font-medium text-gray-400 uppercase"
+          >
+            Contacts
+          </span>
+          <a
+            class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100"
+            href="#"
+          >
+            <svg
+              class="shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+              />
+              <line x1="9" x2="15" y1="10" y2="10" />
+              <line x1="12" x2="12" y1="7" y2="13" />
+            </svg>
+            Contact support
+          </a>
+        </div>
+      </div>
     </div>
     <script type="module" src="assets/js/plugin.js"></script>
   </body>
