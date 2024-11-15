@@ -1,33 +1,22 @@
 {
-  "name": "getstartpack",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "your-project",
+  "private": true,
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "start": "vite",
+    "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "test": "jest",
-    "format": "prettier --write .",
-    "clean": "rimraf dist"
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "aos": "^2.3.4",
-    "autoprefixer": "^10.4.20",
-    "dotenv": "^16.4.5",
-    "postcss": "^8.4.47",
-    "preline": "^2.5.0",
-    "tailwindcss": "^3.4.13",
-    "vite": "^5.4.9"
+    "framer-motion": "^10.16.4",
+    "preline": "^2.0.2"
   },
   "devDependencies": {
-    "eslint": "^8.0.0",
-    "jest": "^27.0.0",
-    "prettier": "^2.0.0",
-    "rimraf": "^3.0.0"
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "vite": "^4.4.5"
   }
 }
