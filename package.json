@@ -1,22 +1,27 @@
 {
-  "name": "your-project",
-  "private": true,
-  "version": "0.0.1",
+  "name": "crypo",
+  "version": "1.0.0",
   "type": "module",
+  "main": "index.js",
   "scripts": {
-    "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
-  "dependencies": {
-    "framer-motion": "^10.16.4",
-    "preline": "^2.0.2"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "devDependencies": {
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.31",
-    "tailwindcss": "^3.3.5",
-    "vite": "^4.4.5"
+    "autoprefixer": "^10.4.20",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.4.49",
+    "prettier": "^3.4.1",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "tailwindcss": "^3.4.15",
+    "vite": "^6.0.2",
+    "vite-plugin-html": "^3.2.2"
   }
 }
