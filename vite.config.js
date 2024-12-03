@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import htmlMinifier from 'html-minifier'
+import htmlMinifier from 'html-minifier-terser'
 
 export default defineConfig({
   base: './',
