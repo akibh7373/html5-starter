@@ -1,34 +1,21 @@
 {
   "name": "html5-starter",
-  "version": "1.0.3",
+  "version": "2.0.0",
+  "private": true,
   "type": "module",
-  "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "preview": "vite preview"
   },
-  "keywords": [
-    "html5",
-    "starter-kit",
-    "vite",
-    "tailwindcss",
-    "postcss",
-    "prettier"
-  ],
-  "author": "Md Ashikur Rahman",
-  "license": "ISC",
-  "description": "A modern HTML5 starter pack with Vite, TailwindCSS, PostCSS, and Prettier for rapid web development",
   "devDependencies": {
-    "autoprefixer": "^10.4.19",
-    "html-minifier-terser": "^7.2.0",
-    "postcss": "^8.4.38",
-    "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.12",
-    "tailwindcss": "^3.4.1",
-    "vite": "^5.1.6",
-    "vite-plugin-html": "^3.2.2"
+    "@tailwindcss/forms": "^0.5.9",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.0.3"
+  },
+  "dependencies": {
+    "preline": "^2.6.0"
   }
 }

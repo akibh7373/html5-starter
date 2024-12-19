@@ -2,73 +2,845 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Modern HTML5 starter pack with Vite, TailwindCSS, PostCSS, and Prettier for rapid web development" />
-    <meta name="keywords" content="HTML5, starter kit, Vite, TailwindCSS, PostCSS, web development" />
-    <meta name="author" content="Md Ashikur Rahman" />
-    
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="HTML5 Starter Pack" />
-    <meta property="og:description" content="Modern and Clean Starting Point for Your Web Projects" />
-    <meta property="og:type" content="website" />
-    
     <title>HTML5 Starter</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
-  <body class="bg-gray-50">
-    <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:p-4">Skip to main content</a>
-    
-    <section id="main-content" class="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center py-20 px-4">
-      <div class="max-w-6xl mx-auto text-center text-white">
-        <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">HTML5 Starter Pack</h1>
-        <p class="text-xl md:text-2xl mb-8 text-blue-100">Modern and Clean Starting Point for Your Web Projects</p>
-        <div class="flex flex-wrap justify-center gap-3 mb-16">
-          <span class="px-4 py-2 bg-white/20 rounded-full text-sm backdrop-blur-sm">Vite 5.1</span>
-          <span class="px-4 py-2 bg-white/20 rounded-full text-sm backdrop-blur-sm">Tailwind CSS 3.4</span>
-          <span class="px-4 py-2 bg-white/20 rounded-full text-sm backdrop-blur-sm">PostCSS 8.4</span>
-          <span class="px-4 py-2 bg-white/20 rounded-full text-sm backdrop-blur-sm">Prettier 3.2</span>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
-          <div class="bg-white/10 backdrop-blur-lg rounded-xl p-6 transform hover:scale-105 transition-all duration-300">
-            <div class="text-4xl mb-4">⚡</div>
-            <h3 class="text-xl font-semibold mb-2">Vite Powered</h3>
-            <p class="text-blue-100">Lightning-fast development with HMR and optimized builds</p>
+  <body class="dark:bg-slate-900">
+    <header
+      class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-3 sm:py-0 dark:bg-neutral-800"
+    >
+      <nav class="max-w-[85rem] w-full mx-auto px-4 md:px-6 lg:px-8">
+        <div class="relative sm:flex sm:items-center">
+          <div class="flex items-center justify-between">
+            <a
+              class="flex-none font-semibold text-xl text-black focus:outline-none focus:opacity-80 dark:text-white"
+              href="#"
+              aria-label="Brand"
+              >Brand</a
+            >
+            <div class="sm:hidden">
+              <button
+                type="button"
+                class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent dark:border-neutral-700 dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+                id="hs-navbar-basic-usage-collapse"
+                aria-expanded="false"
+                aria-controls="hs-navbar-basic-usage"
+                aria-label="Toggle navigation"
+                data-hs-collapse="#hs-navbar-basic-usage"
+              >
+                <svg
+                  class="hs-collapse-open:hidden shrink-0 size-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="3" x2="21" y1="6" y2="6" />
+                  <line x1="3" x2="21" y1="12" y2="12" />
+                  <line x1="3" x2="21" y1="18" y2="18" />
+                </svg>
+                <svg
+                  class="hs-collapse-open:block hidden shrink-0 size-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M18 6 6 18" />
+                  <path d="m6 6 12 12" />
+                </svg>
+              </button>
+            </div>
           </div>
-          
-          <div class="bg-white/10 backdrop-blur-lg rounded-xl p-6 transform hover:scale-105 transition-all duration-300">
-            <div class="text-4xl mb-4">🎨</div>
-            <h3 class="text-xl font-semibold mb-2">Tailwind CSS</h3>
-            <p class="text-blue-100">Utility-first CSS framework with PostCSS integration</p>
-          </div>
-          
-          <div class="bg-white/10 backdrop-blur-lg rounded-xl p-6 transform hover:scale-105 transition-all duration-300">
-            <div class="text-4xl mb-4">✨</div>
-            <h3 class="text-xl font-semibold mb-2">Code Quality</h3>
-            <p class="text-blue-100">Prettier formatting and TailwindCSS plugin included</p>
-          </div>
-          
-          <div class="bg-white/10 backdrop-blur-lg rounded-xl p-6 transform hover:scale-105 transition-all duration-300">
-            <div class="text-4xl mb-4">📦</div>
-            <h3 class="text-xl font-semibold mb-2">Production Ready</h3>
-            <p class="text-blue-100">HTML minification and optimized asset handling</p>
-          </div>
-        </div>
 
-       
+          <div
+            id="hs-navbar-basic-usage"
+            class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow sm:block"
+            aria-labelledby="hs-navbar-basic-usage-collapse"
+          >
+            <div
+              class="flex flex-col gap-y-3 sm:gap-y-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5"
+            >
+              <a
+                class="sm:p-2 font-medium text-blue-500 focus:outline-none"
+                href="#"
+                aria-current="page"
+                >Active</a
+              >
+
+              <div
+                class="hs-dropdown [--strategy:static] sm:[--strategy:absolute] [--adaptive:none] sm:[--trigger:hover] [--auto-close:false] [--is-collapse:true] sm:[--is-collapse:false]"
+              >
+                <button
+                  id="hs-mega-menu"
+                  type="button"
+                  class="hs-dropdown-toggle sm:p-2 flex items-center w-full text-gray-600 font-medium hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                  aria-haspopup="menu"
+                  aria-expanded="false"
+                  aria-label="Mega Menu"
+                >
+                  Mega Menu
+                  <svg
+                    class="hs-dropdown-open:-rotate-180 sm:hs-dropdown-open:rotate-0 duration-300 ms-2 shrink-0 size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+
+                <div
+                  class="hs-dropdown-menu sm:transition-[opacity,margin] sm:ease-in-out sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-full hidden z-10 sm:mt-3 top-full start-0 min-w-60 bg-white sm:shadow-md rounded-lg py-2 sm:px-2 dark:bg-neutral-800 sm:dark:border dark:border-neutral-700 dark:divide-neutral-700 before:absolute"
+                  role="menu"
+                  aria-orientation="vertical"
+                  aria-labelledby="hs-mega-menu"
+                >
+                  <div class="sm:grid sm:grid-cols-3">
+                    <div class="flex flex-col">
+                      <a
+                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                        href="#"
+                      >
+                        About
+                      </a>
+                      <a
+                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                        href="#"
+                      >
+                        Services
+                      </a>
+                      <a
+                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                        href="#"
+                      >
+                        Customer Story
+                      </a>
+                    </div>
+
+                    <div class="flex flex-col">
+                      <a
+                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                        href="#"
+                      >
+                        Careers
+                      </a>
+                      <a
+                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                        href="#"
+                      >
+                        Careers: Overview
+                      </a>
+                      <a
+                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                        href="#"
+                      >
+                        Careers: Apply
+                      </a>
+                    </div>
+
+                    <div class="flex flex-col">
+                      <a
+                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                        href="#"
+                      >
+                        Log In
+                      </a>
+                      <a
+                        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                        href="#"
+                      >
+                        Sign Up
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <a
+                class="sm:p-2 font-medium text-gray-600 hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
+                href="#"
+                >Project</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="hs-dropdown">
+      <button
+        id="hs-dropdown-dark-mode"
+        type="button"
+        class="hs-dropdown-toggle hs-dark-mode group flex items-center text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600 font-medium"
+        aria-haspopup="menu"
+        aria-expanded="false"
+        aria-label="Dropdown"
+      >
+        <svg
+          class="hs-dark-mode-active:hidden block size-4"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+        </svg>
+        <svg
+          class="hs-dark-mode-active:block hidden size-4"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2"></path>
+          <path d="M12 20v2"></path>
+          <path d="m4.93 4.93 1.41 1.41"></path>
+          <path d="m17.66 17.66 1.41 1.41"></path>
+          <path d="M2 12h2"></path>
+          <path d="M20 12h2"></path>
+          <path d="m6.34 17.66-1.41 1.41"></path>
+          <path d="m19.07 4.93-1.41 1.41"></path>
+        </svg>
+      </button>
+
+      <div
+        id="selectThemeDropdown"
+        class="hs-dropdown-menu hs-dropdown-open:opacity-100 mt-2 hidden z-10 transition-[margin,opacity] opacity-0 duration-300 mb-2 origin-bottom-left bg-white shadow-md rounded-lg p-1 space-y-0.5"
+        role="menu"
+        aria-orientation="vertical"
+        aria-labelledby="hs-dropdown-dark-mode"
+      >
+        <button
+          type="button"
+          class="w-full flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100"
+          data-hs-theme-click-value="default"
+        >
+          Light
+        </button>
+        <button
+          type="button"
+          class="w-full flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100"
+          data-hs-theme-click-value="dark"
+        >
+          Dark
+        </button>
+        <button
+          type="button"
+          class="w-full flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100"
+          data-hs-theme-click-value="auto"
+        >
+          Auto (System)
+        </button>
       </div>
-    </section>
-    <script type="module" src="/assets/js/main.js"></script>
+    </div>
+
+    <div
+      class="bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
+    >
+      <div>
+        <span
+          class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg"
+        >
+          <svg
+            class="h-6 w-6 text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <!-- ... -->
+          </svg>
+        </span>
+      </div>
+      <h3
+        class="text-slate-900 dark:text-white mt-5 text-base font-medium tracking-tight"
+      >
+        Writes Upside-Down
+      </h3>
+      <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">
+        The Zero Gravity Pen can be used to write in any orientation, including
+        upside-down. It even works in outer space.
+      </p>
+    </div>
+
+    <div class="hs-accordion-group">
+      <div class="hs-accordion active" id="hs-basic-nested-heading-one">
+        <button
+          class="hs-accordion-toggle hs-accordion-active:text-blue-600 py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start text-gray-800 hover:text-gray-500 focus:outline-none focus:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-blue-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
+          aria-expanded="true"
+          aria-controls="hs-basic-nested-collapse-one"
+        >
+          <svg
+            class="hs-accordion-active:hidden block size-3.5"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14"></path>
+            <path d="M12 5v14"></path>
+          </svg>
+          <svg
+            class="hs-accordion-active:block hidden size-3.5"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14"></path>
+          </svg>
+          Accordion #1
+        </button>
+        <div
+          id="hs-basic-nested-collapse-one"
+          class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300"
+          role="region"
+          aria-labelledby="hs-basic-nested-heading-one"
+        >
+          <div class="hs-accordion-group ps-6">
+            <div
+              class="hs-accordion active"
+              id="hs-basic-nested-sub-heading-one"
+            >
+              <button
+                class="hs-accordion-toggle hs-accordion-active:text-blue-600 py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start text-gray-800 hover:text-gray-500 focus:outline-none focus:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-blue-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
+                aria-expanded="true"
+                aria-controls="hs-basic-nested-sub-collapse-one"
+              >
+                <svg
+                  class="hs-accordion-active:hidden block size-3"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.62421 7.86L13.6242 7.85999"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  ></path>
+                  <path
+                    d="M8.12421 13.36V2.35999"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  ></path>
+                </svg>
+                <svg
+                  class="hs-accordion-active:block hidden size-3"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.62421 7.86L13.6242 7.85999"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  ></path>
+                </svg>
+                Sub accordion #1
+              </button>
+              <div
+                id="hs-basic-nested-sub-collapse-one"
+                class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300"
+                role="region"
+                aria-labelledby="hs-basic-nested-sub-heading-one"
+              >
+                <p class="text-gray-800 dark:text-neutral-200">
+                  <em>This is the third item's accordion body.</em> It is hidden
+                  by default, until the collapse plugin adds the appropriate
+                  classes that we use to style each element. These classes
+                  control the overall appearance, as well as the showing and
+                  hiding via CSS transitions.
+                </p>
+              </div>
+            </div>
+
+            <div class="hs-accordion" id="hs-basic-nested-sub-heading-two">
+              <button
+                class="hs-accordion-toggle hs-accordion-active:text-blue-600 py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start text-gray-800 hover:text-gray-500 focus:outline-none focus:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-blue-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
+                aria-expanded="false"
+                aria-controls="hs-basic-nested-sub-collapse-two"
+              >
+                <svg
+                  class="hs-accordion-active:hidden block size-3"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.62421 7.86L13.6242 7.85999"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  ></path>
+                  <path
+                    d="M8.12421 13.36V2.35999"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  ></path>
+                </svg>
+                <svg
+                  class="hs-accordion-active:block hidden size-3"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.62421 7.86L13.6242 7.85999"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  ></path>
+                </svg>
+                Sub accordion #2
+              </button>
+              <div
+                id="hs-basic-nested-sub-collapse-two"
+                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                role="region"
+                aria-labelledby="hs-basic-nested-sub-heading-two"
+              >
+                <p class="text-gray-800 dark:text-neutral-200">
+                  <em>This is the second item's accordion body.</em> It is
+                  hidden by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions.
+                </p>
+              </div>
+            </div>
+
+            <div class="hs-accordion" id="hs-basic-nested-sub-heading-three">
+              <button
+                class="hs-accordion-toggle hs-accordion-active:text-blue-600 py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start text-gray-800 hover:text-gray-500 focus:outline-none focus:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-blue-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
+                aria-expanded="false"
+                aria-controls="hs-basic-nested-sub-collapse-three"
+              >
+                <svg
+                  class="hs-accordion-active:hidden block size-3"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.62421 7.86L13.6242 7.85999"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  ></path>
+                  <path
+                    d="M8.12421 13.36V2.35999"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  ></path>
+                </svg>
+                <svg
+                  class="hs-accordion-active:block hidden size-3"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.62421 7.86L13.6242 7.85999"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  ></path>
+                </svg>
+                Sub accordion #3
+              </button>
+              <div
+                id="hs-basic-nested-sub-collapse-three"
+                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                role="region"
+                aria-labelledby="hs-basic-nested-sub-heading-three"
+              >
+                <p class="text-gray-800 dark:text-neutral-200">
+                  <em>This is the first item's accordion body.</em> It is hidden
+                  by default, until the collapse plugin adds the appropriate
+                  classes that we use to style each element. These classes
+                  control the overall appearance, as well as the showing and
+                  hiding via CSS transitions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hs-accordion" id="hs-basic-nested-heading-two">
+        <button
+          class="hs-accordion-toggle hs-accordion-active:text-blue-600 py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start text-gray-800 hover:text-gray-500 focus:outline-none focus:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-blue-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
+          aria-expanded="false"
+          aria-controls="hs-basic-nested-collapse-two"
+        >
+          <svg
+            class="hs-accordion-active:hidden block size-3.5"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14"></path>
+            <path d="M12 5v14"></path>
+          </svg>
+          <svg
+            class="hs-accordion-active:block hidden size-3.5"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14"></path>
+          </svg>
+          Accordion #2
+        </button>
+        <div
+          id="hs-basic-nested-collapse-two"
+          class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+          role="region"
+          aria-labelledby="hs-basic-nested-heading-two"
+        >
+          <p class="text-gray-800 dark:text-neutral-200">
+            <em>This is the second item's accordion body.</em> It is hidden by
+            default, until the collapse plugin adds the appropriate classes that
+            we use to style each element. These classes control the overall
+            appearance, as well as the showing and hiding via CSS transitions.
+          </p>
+        </div>
+      </div>
+
+      <div class="hs-accordion" id="hs-basic-nested-heading-three">
+        <button
+          class="hs-accordion-toggle hs-accordion-active:text-blue-600 py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start text-gray-800 hover:text-gray-500 focus:outline-none focus:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-blue-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
+          aria-expanded="false"
+          aria-controls="hs-basic-nested-collapse-three"
+        >
+          <svg
+            class="hs-accordion-active:hidden block size-3.5"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14"></path>
+            <path d="M12 5v14"></path>
+          </svg>
+          <svg
+            class="hs-accordion-active:block hidden size-3.5"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14"></path>
+          </svg>
+          Accordion #3
+        </button>
+        <div
+          id="hs-basic-nested-collapse-three"
+          class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+          role="region"
+          aria-labelledby="hs-basic-nested-heading-three"
+        >
+          <p class="text-gray-800 dark:text-neutral-200">
+            <em>This is the first item's accordion body.</em> It is hidden by
+            default, until the collapse plugin adds the appropriate classes that
+            we use to style each element. These classes control the overall
+            appearance, as well as the showing and hiding via CSS transitions.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hs-dropdown relative inline-flex">
+      <button
+        id="hs-dropdown-with-icons"
+        type="button"
+        class="hs-dropdown-toggle py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+        aria-haspopup="menu"
+        aria-expanded="false"
+        aria-label="Dropdown"
+      >
+        Actions
+        <svg
+          class="hs-dropdown-open:rotate-180 size-4"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m6 9 6 6 6-6" />
+        </svg>
+      </button>
+
+      <div
+        class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg mt-2 divide-y divide-gray-200 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700"
+        role="menu"
+        aria-orientation="vertical"
+        aria-labelledby="hs-dropdown-with-icons"
+      >
+        <div class="p-1 space-y-0.5">
+          <a
+            class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
+            href="#"
+          >
+            <svg
+              class="shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+              <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+            </svg>
+            Newsletter
+          </a>
+          <a
+            class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
+            href="#"
+          >
+            <svg
+              class="shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="8" cy="21" r="1" />
+              <circle cx="19" cy="21" r="1" />
+              <path
+                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+              />
+            </svg>
+            Purchases
+          </a>
+          <a
+            class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
+            href="#"
+          >
+            <svg
+              class="shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"
+              />
+              <path d="M12 12v9" />
+              <path d="m8 17 4 4 4-4" />
+            </svg>
+            Downloads
+          </a>
+          <a
+            class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
+            href="#"
+          >
+            <svg
+              class="shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+            Team Account
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <button
+      type="button"
+      class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+      aria-haspopup="dialog"
+      aria-expanded="false"
+      aria-controls="hs-slide-up-animation-modal"
+      data-hs-overlay="#hs-slide-up-animation-modal"
+    >
+      Open modal
+    </button>
+
+    <div
+      id="hs-slide-up-animation-modal"
+      class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none"
+      role="dialog"
+      tabindex="-1"
+      aria-labelledby="hs-slide-up-animation-modal-label"
+    >
+      <div
+        class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-14 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto"
+      >
+        <div
+          class="flex flex-col bg-white border shadow-sm rounded-xl pointer-events-auto dark:bg-neutral-800 dark:border-neutral-700 dark:shadow-neutral-700/70"
+        >
+          <div
+            class="flex justify-between items-center py-3 px-4 border-b dark:border-neutral-700"
+          >
+            <h3
+              id="hs-slide-up-animation-modal-label"
+              class="font-bold text-gray-800 dark:text-white"
+            >
+              Modal title
+            </h3>
+            <button
+              type="button"
+              class="hs-dropup-toggle size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-700 dark:hover:bg-neutral-600 dark:text-neutral-400 dark:focus:bg-neutral-600"
+              aria-label="Close"
+              data-hs-overlay="#hs-slide-up-animation-modal"
+            >
+              <span class="sr-only">Close</span>
+              <svg
+                class="shrink-0 size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="p-4 overflow-y-auto">
+            <p class="mt-1 text-gray-800 dark:text-neutral-400">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content.
+            </p>
+          </div>
+          <div
+            class="flex justify-end items-center gap-x-2 py-3 px-4 border-t dark:border-neutral-700"
+          >
+            <button
+              type="button"
+              class="hs-dropup-toggle py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+              data-hs-overlay="#hs-slide-up-animation-modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+            >
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
